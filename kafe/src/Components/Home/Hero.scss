@@ -1,0 +1,137 @@
+@import '../../colors';
+
+.hero {
+	&__content {
+		padding-bottom: 3rem;
+		margin-top: 3rem;
+		align-items: center;
+
+		img {
+			width: 12rem;
+		}
+
+		.vstack {
+			align-items: center;
+		}
+
+		h3,
+		p {
+			text-align: center;
+		}
+
+		h3 {
+			font-weight: 500;
+			font-size: 1.8rem;
+			max-width: 38rem;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 1.2rem;
+			max-width: 38rem;
+		}
+
+		.info-block {
+			h3 {
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+			}
+
+			.delivery_list,
+			.menu_list {
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 5rem;
+
+				.card {
+					width: 20rem;
+					// height: 25rem;
+
+					img {
+						width: 100%;
+						height: 12rem;
+						object-fit: cover;
+					}
+
+					a {
+						font-size: 80%;
+					}
+
+					&-text {
+						text-align: left;
+					}
+				}
+			}
+
+			.menu_list .card {
+				position: relative;
+				width: 24rem;
+				padding-bottom: 2rem;
+				min-height: 40rem;
+
+				.animated__button {
+					position: absolute;
+					bottom: 1rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.hero {
+		&__content {
+			margin-left: 3rem;
+			align-items: start;
+
+			.vstack {
+				align-items: start;
+			}
+
+			.image_layout {
+				max-width: 37rem;
+				align-items: center;
+			}
+
+			h3,
+			p {
+				text-align: left;
+			}
+
+			h3 {
+				font-size: 1.6rem;
+			}
+
+			p {
+				font-size: 1rem;
+			}
+
+			.info-block {
+				.delivery_list,
+				.menu_list {
+					gap: 2rem;
+				}
+
+				.menu_list .card {
+					min-height: 34rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero {
+		&__content {
+			margin-top: 5rem;
+			margin-left: 6rem;
+
+			.info-block {
+				.delivery_list,
+				.menu_list {
+					justify-content: start;
+				}
+			}
+		}
+	}
+}

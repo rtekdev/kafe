@@ -1,0 +1,98 @@
+@import '../../../colors';
+
+.users {
+	justify-content: space-between;
+	h1 {
+		font-weight: 700;
+	}
+
+	&-search {
+		border-radius: 10px;
+		border: 1px solid grey;
+
+		input {
+			width: 25rem;
+		}
+
+		button,
+		input {
+			font-size: 1rem;
+		}
+	}
+
+	select {
+		cursor: pointer;
+		font-size: 1.1rem;
+	}
+
+	&__list {
+		th {
+			font-weight: 400;
+		}
+
+		&-row {
+			height: 5rem;
+
+			td {
+				padding: 2rem 0;
+			}
+		}
+
+		&-button {
+			width: 2.5rem;
+			height: 2.5rem;
+			border: none;
+			border-radius: 0.2rem;
+			margin-left: 0.75rem;
+			background-color: rgb(238, 238, 238);
+
+			svg {
+				transition: color 0.3s;
+				color: grey;
+
+				&:hover {
+					color: $additional_green;
+				}
+			}
+		}
+	}
+
+	&__bar {
+		justify-content: space-between;
+		width: 100%;
+		padding: 0.5rem 1rem;
+		background-color: white;
+		border-radius: 0.5rem;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+		p {
+			margin: auto 0;
+		}
+
+		button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 0.2rem;
+			margin-left: 0.75rem;
+			background-color: transparent;
+			border: 1px solid transparent;
+			transition: border-color 0.4s;
+
+			&:not(:disabled):hover {
+				border-color: $additional_green;
+			}
+
+			svg,
+			p {
+				font-size: 2.4rem;
+			}
+
+			&.active {
+				border-color: $additional_green;
+			}
+		}
+	}
+}

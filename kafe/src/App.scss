@@ -1,0 +1,118 @@
+@import './colors';
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+	scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 75%; /* 1rem = 12px */
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		font-size: 87.5%; /* 1rem = 14px */
+	}
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6rem;
+}
+
+.bgc--sand {
+	background-color: $background;
+}
+
+.bgc--light_grey {
+	background-color: $light_grey;
+}
+
+.brand_logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	text-decoration: none;
+
+	img {
+		width: 3rem;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.color {
+	&-green {
+		color: $additional_green;
+	}
+	&-grey {
+		color: #8b8b8b;
+	}
+
+	&-light_grey {
+		color: rgb(200, 200, 200);
+	}
+}
+
+.brand_name {
+	font-size: 3rem;
+	font-family: 'Love Ya Like A Sister', 'cursive';
+	background-image: linear-gradient(
+		to bottom,
+		$additional_green,
+		$accent_green
+	);
+	background-clip: text;
+	color: transparent;
+}
+
+
+.animated {
+	&__button {
+		background: none;
+		border-radius: 2rem;
+		padding: 0.75rem 1.25rem;
+		margin-top: 1rem;
+		font-size: 95% !important;
+		cursor: pointer;
+		transition: background-position 0.5s ease, color 0.5s;
+
+		&--green {
+			color: $accent_green;
+			border: 1px solid $accent_green;
+			background-image: linear-gradient(
+				to right,
+				$accent_green 50%,
+				transparent 50%
+			);
+			background-size: 200% 100%;
+			background-position: right;
+			background-repeat: no-repeat;
+
+			&:hover {
+				color: white;
+				background-position: left;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.animated {
+		&__button {
+			font-size: 70% !important;
+		}
+	}
+}
