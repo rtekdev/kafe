@@ -1,21 +1,68 @@
+@import "../../../colors";
+
 .menu {
-	&__drink {
-		padding: 5rem 0 10rem;
-		img {
-			width: 30rem;
-		}
-	}
+  &__drink {
+    padding: 5rem 0 10rem;
+    img {
+      height: 35rem;
+      border-radius: 2rem;
+    }
+
+    .content {
+      .description {
+        color: grey;
+      }
+
+      .select-blocks {
+        align-items: end;
+      }
+
+      .heading {
+        font-weight: 600;
+        font-size: 2.2rem;
+      }
+
+      .info-block {
+        border: none;
+        background: none;
+        width: 3.75rem;
+        height: 3.75rem;
+        border: 2px solid grey;
+        border-radius: 0.5rem;
+        transition: border-color 0.4s;
+
+        &:hover,
+        &.active {
+          border-color: $accent_green;
+        }
+      }
+
+      table {
+        td:first-child {
+          color: grey;
+        }
+      }
+
+      .cta-button {
+        background-color: $accent_green;
+        color: white;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.8rem 0;
+      }
+    }
+  }
 }
 
 .card__list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 @media (min-width: 1200px) {
-	.card__list {
-		justify-content: start;
-	}
+  .card__list {
+    justify-content: start;
+  }
 }
