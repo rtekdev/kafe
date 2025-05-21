@@ -26,4 +26,4 @@ app.use((error, req, res, next) => {
 	res.status(status).json({ message: message });
 });
 
-app.listen(PORT, () => console.log(`Serwer działa na porcie: ${PORT}`));
+app.listen(PORT, () => console.log(`Server is working at PORT: ${PORT}`));
