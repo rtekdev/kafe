@@ -12,7 +12,6 @@ const getPaginationRange = (
 	let start = Math.max(1, current - half);
 	let end = Math.min(total, current + half);
 
-	// Jeśli jesteśmy blisko końca, przesuwamy start
 	if (end - start + 1 < limit) {
 		if (start === 1) {
 			end = Math.min(total, start + limit - 1);

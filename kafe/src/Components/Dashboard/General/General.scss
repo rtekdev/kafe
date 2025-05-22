@@ -1,0 +1,68 @@
+.help {
+  &__text {
+    align-items: center;
+
+    h2 {
+      font-weight: 600;
+      color: #030749;
+      font-size: 4rem;
+    }
+
+    p {
+      text-align: center;
+      color: grey;
+      font-size: 1.5rem;
+    }
+
+    .search {
+      justify-content: center;
+
+      input {
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      button {
+        padding: 0.6rem 0.7rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #030749;
+        color: white;
+        cursor: pointer;
+
+        svg {
+          margin-right: 0.5rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  &__tiles {
+    justify-content: space-between;
+
+    .vstack {
+      align-items: center;
+      padding: 1.5rem 0;
+      border: 1px solid grey;
+      border-radius: 1rem;
+      max-width: 25rem;
+      margin-top: 2rem;
+
+      hr {
+        width: 100%;
+      }
+
+      img {
+        width: 10rem;
+      }
+
+      a {
+        color: #14aeae;
+        cursor: pointer;
+      }
+    }
+  }
+}

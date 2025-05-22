@@ -1,0 +1,128 @@
+@import "../../../colors";
+
+.orders {
+  &__shortcut {
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+
+    .date {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-left: 1rem;
+
+      h3 {
+        font-size: 4rem;
+      }
+
+      div {
+        margin-bottom: 0.5rem;
+        p {
+          margin: 0;
+
+          &:first-child {
+            font-weight: 500;
+          }
+
+          &:last-child {
+            color: rgb(88, 88, 88);
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__tile {
+    border-left: 3px solid black;
+    padding: 0.5rem 1.5rem 0 2rem;
+    width: 16rem;
+
+    p:first-child {
+      margin-bottom: 0;
+    }
+
+    .fwb {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    svg {
+      color: grey;
+      margin-right: 0.5rem;
+    }
+
+    &.green {
+      border-left-color: $additional_green;
+
+      .color {
+        color: $additional_green;
+      }
+    }
+
+    &.blue {
+      border-left-color: #14aeae;
+      .color {
+        color: #14aeae;
+      }
+    }
+
+    &.yellow {
+      border-left-color: #f58700;
+      .color {
+        color: #f58700;
+      }
+    }
+
+    &.red {
+      border-left-color: #f23838;
+      .color {
+        color: #f23838;
+      }
+    }
+  }
+
+  &__list {
+    thead th {
+      font-weight: 400;
+    }
+
+    tbody tr {
+      td {
+        color: grey;
+        padding-top: 1rem;
+      }
+
+      .custom-block {
+        background-color: rgba(0, 0, 0, 0.05);
+        text-align: center;
+        padding: 0.3rem 0.2rem;
+        border-radius: 0.5rem;
+
+        &.controls {
+          background-color: #3fa595;
+          color: white;
+          cursor: pointer;
+        }
+
+        &.green {
+          background-color: rgba(35, 233, 161, 0.2);
+          color: $accent_green;
+        }
+
+        &.red {
+          background-color: rgba(255, 0, 0, 0.3);
+          color: #f23838;
+        }
+
+        &.yellow {
+          background-color: rgba(255, 255, 0, 0.3);
+          color: #f58700;
+        }
+      }
+    }
+  }
+}
