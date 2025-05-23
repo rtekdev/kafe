@@ -1,0 +1,64 @@
+@import "../../../colors";
+
+.settings {
+  &__heading {
+    align-items: center;
+
+    p {
+      color: grey;
+    }
+
+    button {
+      border: none;
+      padding: 0.5rem 1rem;
+      background-color: rgb(91, 153, 91);
+      color: white;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__rows {
+    .hstack {
+      align-items: start;
+
+      p {
+        width: 15rem;
+        height: 5rem;
+        margin-top: 1rem;
+        color: grey;
+      }
+
+      .control {
+        width: 100%;
+
+        input {
+          padding: 0.5rem 1rem;
+          border: 1px solid grey;
+          border-radius: 0.5rem;
+          width: 100%;
+        }
+      }
+    }
+
+    .hstack:first-child {
+      .avatar {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .control {
+        align-items: center;
+
+        p {
+          width: 100%;
+          padding-top: 2rem;
+          padding-left: 1rem;
+        }
+      }
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}

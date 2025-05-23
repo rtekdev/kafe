@@ -30,6 +30,7 @@ import ProductsPage, {
 } from "./Pages/Dashboard/Admin/Products";
 import OrdersDashboard from "./Pages/Dashboard/User/Orders";
 import HelpDashboard from "./Pages/Dashboard/General/Help";
+import SettingsDashboard from "./Pages/Dashboard/General/Settings";
 
 const router = createBrowserRouter([
   {
@@ -77,7 +78,7 @@ const router = createBrowserRouter([
           },
           { path: "users", element: <UsersPage />, loader: usersLoader },
           { path: "help", element: <HelpDashboard /> },
-          { path: "settings" },
+          { path: "settings", element: <SettingsDashboard /> },
         ],
       },
       { path: "auth", element: <AuthenticationPage />, action: authAction },
