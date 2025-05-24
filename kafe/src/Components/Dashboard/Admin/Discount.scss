@@ -1,0 +1,62 @@
+.discount {
+  &__search {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__block {
+    position: relative;
+    width: 30rem;
+    z-index: 100;
+
+    &:hover .discount__info {
+      bottom: -53%;
+    }
+  }
+
+  &__content {
+    background-color: rgb(215, 70, 215);
+    border-radius: 0.5rem;
+    padding: 0.8rem 2rem;
+    z-index: 100;
+    color: white;
+
+    p:first-child {
+      font-size: 1.3rem;
+    }
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+      p {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 5%;
+    width: 28rem;
+    padding: 0.7rem 1rem 0 1rem;
+    margin-left: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: -200;
+    transition: bottom 0.4s ease;
+
+    .hstack {
+      justify-content: space-between;
+      p {
+        font-size: 1rem;
+        color: grey;
+      }
+    }
+  }
+}

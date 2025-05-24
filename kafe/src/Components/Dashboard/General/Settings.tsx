@@ -1,9 +1,28 @@
 import { Stack } from "react-bootstrap";
 import "./Settings.scss";
 import { useAppSelector } from "../../../store";
+import { ChangeEvent, useEffect, useState } from "react";
 
 const Settings: React.FC = () => {
   const user = useAppSelector((state) => state.user.user);
+  const [username, setUsername] = useState(user?.username);
+  const [email, setEmail] = useState(user?.email);
+  const [isChanged, setIsChanged] = useState(false);
+
+  const handleOnChangeUsername = (e: ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
+
+  const handleOnChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  useEffect(() => {
+    if (username !== user?.username || email !== user?.email)
+      setIsChanged(true);
+    else setIsChanged(false);
+  }, [username, email]);
+
   if (!user) return null;
 
   return (
@@ -13,7 +32,9 @@ const Settings: React.FC = () => {
           <h2>Personal Info</h2>
           <p>Update your personal details</p>
         </Stack>
-        <button type="button">Save</button>
+        <button type="button" disabled={!isChanged}>
+          Save
+        </button>
       </Stack>
       <hr />
       <Stack gap={3} className="settings__rows">
@@ -30,14 +51,22 @@ const Settings: React.FC = () => {
           <p>Username</p>
           <div className="control">
             <hr />
-            <input type="text" value={user.username} />
+            <input
+              type="text"
+              onChange={(e) => handleOnChangeUsername(e)}
+              value={username}
+            />
           </div>
         </Stack>
         <Stack direction="horizontal">
           <p>Email</p>
           <div className="control">
             <hr />
-            <input type="email" value={user.email} />
+            <input
+              type="email"
+              onChange={(e) => handleOnChangeEmail(e)}
+              value={email}
+            />
           </div>
         </Stack>
       </Stack>

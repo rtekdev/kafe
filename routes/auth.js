@@ -39,7 +39,7 @@ router.post('/auth/signup', async (req, res, next) => {
 	}
 
 	!isValidText(data.password, 4) &&
-		(errors.passwoord =
+		(errors.password =
 			'Invalid password, Must be at least 4 characters long.');
 	if (Object.keys(errors).length > 0) {
 		return res.status(422).json({

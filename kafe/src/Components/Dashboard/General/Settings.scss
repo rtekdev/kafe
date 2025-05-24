@@ -14,6 +14,10 @@
       background-color: rgb(91, 153, 91);
       color: white;
       border-radius: 0.5rem;
+
+      &:disabled {
+        background-color: grey;
+      }
     }
   }
 
