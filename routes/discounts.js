@@ -4,6 +4,15 @@ import { addDiscount } from "../data/discounts.js";
 
 const router = express.Router();
 
+router.get("/", async (req, res, next) => {
+  try {
+    const discounts = await Discount.find({});
+    res.json(discounts);
+  } catch (err) {
+    next(err);
+  }
+});
+
 router.get("/active", async (req, res, next) => {
   try {
     const activeDiscounts = await Discount.findActive()

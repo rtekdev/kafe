@@ -31,7 +31,9 @@ import ProductsPage, {
 import OrdersDashboard from "./Pages/Dashboard/User/Orders";
 import HelpDashboard from "./Pages/Dashboard/General/Help";
 import SettingsDashboard from "./Pages/Dashboard/General/Settings";
-import Discounts from "./Pages/Dashboard/Admin/Discounts";
+import Discounts, {
+  loader as discountsLoader,
+} from "./Pages/Dashboard/Admin/Discounts";
 
 const router = createBrowserRouter([
   {
@@ -78,7 +80,11 @@ const router = createBrowserRouter([
             loader: productsLoader,
           },
           { path: "users", element: <UsersPage />, loader: usersLoader },
-          { path: "discounts", element: <Discounts /> },
+          {
+            path: "discounts",
+            element: <Discounts />,
+            loader: discountsLoader,
+          },
           { path: "help", element: <HelpDashboard /> },
           { path: "settings", element: <SettingsDashboard /> },
         ],

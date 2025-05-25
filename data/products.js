@@ -52,11 +52,7 @@ export const addProduct = async (data) => {
 		extras: data.extras,
 		image: data.image,
 		description: data.description,
-		promotion: {
-			is: data.promotion.is,
-			value: data.promotion.value,
-			date: data.promotion.date,
-		},
+		promotion: [],
 		created_by: data?.created_by ? data.created_by : null,
 		availability: data.availabilit,
 		reviews: [],

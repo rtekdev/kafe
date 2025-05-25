@@ -1,5 +1,4 @@
-import { Button, Stack } from "react-bootstrap";
-import { GoPlus } from "react-icons/go";
+import { Stack } from "react-bootstrap";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { Form } from "react-router-dom";
 import "./Discount.scss";
@@ -15,10 +14,6 @@ const DiscountSearchBar = () => {
           </button>
           <input placeholder="Search by name..." />
         </Form>
-        <Button type="button" className="purple">
-          <GoPlus />
-          New Discount
-        </Button>
       </Stack>
     </Stack>
   );

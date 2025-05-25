@@ -10,12 +10,11 @@
     z-index: 100;
 
     &:hover .discount__info {
-      bottom: -53%;
+      bottom: 3%;
     }
   }
 
   &__content {
-    background-color: rgb(215, 70, 215);
     border-radius: 0.5rem;
     padding: 0.8rem 2rem;
     z-index: 100;
@@ -38,17 +37,37 @@
         font-size: 1rem;
       }
     }
+
+    &.purple {
+      background: linear-gradient(to right, #5033e1, #9c8af7);
+    }
+
+    &.orange {
+      background: linear-gradient(to right, #d87829, #f0a765);
+    }
+
+    &.green {
+      background: linear-gradient(to right, #05a074, #58dcb4);
+    }
+
+    &.red {
+      background: linear-gradient(to right, #db3232, #f79291);
+    }
+
+    &.blue {
+      background: linear-gradient(to right, #2793d7, #60b4ef);
+    }
   }
 
   &__info {
-    position: absolute;
-    bottom: 5%;
+    position: relative;
+    bottom: 50%;
     width: 28rem;
     padding: 0.7rem 1rem 0 1rem;
     margin-left: 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-    z-index: -200;
+    z-index: -1;
     transition: bottom 0.4s ease;
 
     .hstack {

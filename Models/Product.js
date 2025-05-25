@@ -36,7 +36,10 @@ const productSchema = mongoose.Schema(
       required: true,
       default: "",
     },
-    promotion: [{ type: mongoose.Schema.Types.ObjectId, ref: "Discount" }],
+    promotion: {
+      type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Discount" }],
+      default: [],
+    },
     created_by: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",

@@ -20,7 +20,6 @@
 		"extras": ["vanilla", "chocolate drizzle"],
 		"image": "espresso.jpg",
 		"description": "A strong and aromatic coffee with a rich flavor and a velvety crema. Served in a small cup, it's the perfect shot of energy. Ideal for those who appreciate bold taste and a true coffee experience.",
-		"promotion": {},
 		"created_by": null,
 		"availability": true
 	},
@@ -49,7 +48,6 @@
 		"extras": ["vanilla", "caramel"],
 		"image": "americano.jpg",
 		"description": "Americano is a popular coffee drink made by diluting a shot of espresso with hot water. It has a smooth, rich flavor and a lighter strength compared to straight espresso. Perfect for those who enjoy the taste of espresso but prefer a milder brew.",
-		"promotion": {},
 		"created_by": null,
 		"availability": true
 	},
@@ -74,7 +72,6 @@
 		"extras": ["caramel", "whipped cream"],
 		"image": "cappuccino.jpg",
 		"description": "Cappuccino is a classic Italian coffee made with equal parts espresso, steamed milk, and milk foam. It has a rich, bold flavor balanced by the creamy texture of the milk. Often enjoyed in the morning, it's a perfect blend of strength and smoothness.",
-		"promotion": {},
 		"created_by": null,
 		"availability": true
 	},
@@ -99,7 +96,6 @@
 		"extras": ["vanilla", "chocolate drizzle"],
 		"image": "brewed.jpg",
 		"description": "Filter coffee is a brewed coffee made by pouring hot water over ground coffee, allowing it to slowly drip through a filter. It has a clean, smooth taste that highlights the natural flavors of the beans. This method is popular for its simplicity and ability to bring out subtle aromas.",
-		"promotion": {},
 		"created_by": null,
 		"availability": true
 	},
@@ -124,7 +120,6 @@
 		"extras": ["vanilla", "chocolate drizzle"],
 		"image": "cold_brew.jpg",
 		"description": "Cold Brew Latte is a refreshing coffee drink made by mixing cold brew concentrate with milk, served over ice. It has a smooth, mellow flavor with low acidity and a creamy finish. Perfect for warm days, it offers a cool twist on traditional coffee.",
-		"promotion": {},
 		"created_by": null,
 		"availability": true
 	}
