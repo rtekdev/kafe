@@ -1,5 +1,10 @@
 import express from "express";
-import { getById, getByUsername, readUsers } from "../data/user.js";
+import {
+  findAndUpdate,
+  getById,
+  getByUsername,
+  readUsers,
+} from "../data/user.js";
 import { NotFoundError } from "../util/errors.js";
 import { checkAuthMiddleware as checkAuth } from "../util/auth.js";
 
@@ -48,6 +53,22 @@ router.post("/remove_from_cart", async (req, res) => {
     const user = await getById(userID);
     await user.removeFromCart(productID, productSize);
     res.status(200).json({ message: "Removed from cart" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+router.post("/update", async (req, res) => {
+  const { id, data } = req.body;
+
+  try {
+    const user = await findAndUpdate(id, data);
+    if (user) {
+      return res
+        .status(200)
+        .json({ message: "User successfully updated", user: user });
+    }
+    res.status(400).json({ message: "Error while updating User" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

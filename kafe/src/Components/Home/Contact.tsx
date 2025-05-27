@@ -41,6 +41,13 @@ const Contact: React.FC = () => {
               ))}
             </ListGroup>
           </Stack>
+          <a
+            href="/files/documentation.pdf"
+            download="/files/documentation.pdf"
+            style={{ color: "blue" }}
+          >
+            Download Documentation
+          </a>
         </Stack>
       </Container>
     </Stack>

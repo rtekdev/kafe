@@ -31,7 +31,7 @@ const navItems: NavGroup[] = [
   {
     name: "Menu",
     paths: [
-      { path: "home", label: "Dashboard", icon: <MdDashboard /> },
+      // { path: "home", label: "Dashboard", icon: <MdDashboard /> },
       { path: "orders", label: "Orders", icon: <AiOutlineGlobal /> },
     ],
   },
@@ -134,6 +134,7 @@ const DashboardNavigation: React.FC = () => {
                     <Form method="post" action="/logout">
                       <button
                         type="submit"
+                        style={{ background: "transparent" }}
                         className={hovered === p.path ? "selected" : ""}
                         onClick={() => dispatch(userActions.clearUser())}
                       >

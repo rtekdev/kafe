@@ -54,7 +54,7 @@ export const addProduct = async (data) => {
 		description: data.description,
 		promotion: [],
 		created_by: data?.created_by ? data.created_by : null,
-		availability: data.availabilit,
+		availability: data.availability,
 		reviews: [],
 	});
 

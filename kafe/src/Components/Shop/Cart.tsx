@@ -4,7 +4,6 @@ import { CartItem, userActions } from "../../store/user-redux";
 import Modal from "../UI/Modal";
 import { currencyFormatter } from "../../util/formatting";
 import { Stack } from "react-bootstrap";
-import { ProductBySize } from "../../store/product-redux";
 import CartRecord from "./CartRecord";
 import { IoArrowBack } from "react-icons/io5";
 
